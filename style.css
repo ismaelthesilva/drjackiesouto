@@ -1,0 +1,48 @@
+/* Custom Styles */
+
+/* Heading Font */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Body Text Font */
+p, li, span {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Hero Section */
+#hero {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+#hero .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#hero h1, #hero p {
+    z-index: 2;
+    position: relative;
+}
+
+.btn-primary {
+    background-color: #6a1b9a;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #4a148c;
+}
+
+footer {
+    background-color: #6a1b9a;
+    color: #fff;
+}

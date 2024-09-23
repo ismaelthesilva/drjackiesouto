@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auckland Personal Trainer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section id="hero" class="vh-100 d-flex flex-column justify-content-center align-items-center text-center text-white"
+        style="background-image: url('src/purple-pt.jpg'); background-size: cover; background-position: center;">
+        <div class="overlay"></div>
+        <h1 class="display-4">Train with Strength, Train with Heart</h1>
+        <p class="lead">Empowering Aucklanders to Reach Their Fitness Potential</p>
+        <a href="#services" class="btn btn-primary btn-lg">Get Started</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 text-center text-md-start bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>About Me</h2>
+                    <p>
+                        Hi, I’m Jackie, a personal trainer with over 14 years of experience in helping women and men of all fitness levels achieve their goals. My approach is all about balance and sustainability—no quick fixes, just real results.
+                        <strong>Let’s work together to unlock your best self.</strong>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img src="src/about-img.jpg" alt="Personal Trainer" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-5">Services</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h3 class="card-title">One-on-One Training</h3>
+                            <p class="card-text">Personalized workout plans designed specifically for you. Whether you're just getting started or pushing your limits, we'll work together to meet your goals.</p>
+                            <button class="btn btn-primary" onclick="alert('Inquire about One-on-One Training!')">Inquire</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h3 class="card-title">Group Classes</h3>
+                            <p class="card-text">Get fit and have fun with others! My small group classes offer a supportive environment with workouts designed to be scalable for all fitness levels.</p>
+                            <button class="btn btn-primary" onclick="alert('Inquire about Group Classes!')">Inquire</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h3 class="card-title">Online Coaching</h3>
+                            <p class="card-text">Train with me from anywhere! I offer customized online coaching plans that include nutrition tips and home workouts to keep you on track.</p>
+                            <button class="btn btn-primary" onclick="alert('Inquire about Online Coaching!')">Inquire</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 bg-dark text-white">
+        <div class="container text-center">
+            <h2 class="mb-5">What Clients Say</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"Training with Jackie was the best decision I made! I’ve gained confidence and strength in just a few months."</p>
+                        <footer class="blockquote-footer text-white">Sarah, Auckland</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"Jackie's group classes are so much fun and challenging. I’ve lost weight and made new friends!"</p>
+                        <footer class="blockquote-footer text-white">Anna, North Shore</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"Her online coaching helped me stay on track even during lockdown. Couldn’t recommend more!"</p>
+                        <footer class="blockquote-footer text-white">Emily, Wellington</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 text-center bg-light">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>Ready to start your fitness journey? Let's connect!</p>
+            <form id="contactForm">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="my-3">
+                    <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
+                </div>
+                <input type="hidden" id="recipientEmail" value="help@jackiesouto.com">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <p>© 2024 Auckland PT | All Rights Reserved</p>
+    </footer>
+
+    <!-- Bootstrap JS and Custom Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form values
+            const name = this[0].value;
+            const email = this[1].value;
+            const message = this[2].value;
+
+            // Create a data object to send
+            const formData = {
+                name: name,
+                email: email,
+                message: message,
+                recipient: document.getElementById('recipientEmail').value
+            };
+
+            // Simulate sending form data (replace this with actual email sending logic)
+            console.log('Form submitted:', formData);
+
+            // Clear the form fields
+            this.reset();
+
+            // Show a success message
+            alert('Your message has been sent!');
+        });
+    </script>
+</body>
+
+</html>
